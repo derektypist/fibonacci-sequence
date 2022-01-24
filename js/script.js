@@ -15,3 +15,30 @@ function getNumberInfo() {
     // Display Information in the Browser
     document.getElementById('numinfo').innerHTML = txt;
 }
+
+// Function to Generate nth Fibonacci Number
+function fibonacci(n) {
+    if (n>=0 && n<=1) {
+        return n;
+    }
+
+    // Fill the Array with number 0 n+1 times
+    let fibs = Array(n+1).fill(0);
+
+    // Set first two numbers to 0 and 1
+    fibs[0] = 0;
+    fibs[1] = 1;
+
+    // Loop from 2 to n
+    for (let i=2;i<=n;i++) {
+        fibs[i] = fibs[i-1] + fibs[i-2];
+    }
+
+    // Return the nth Fibonacci Number
+    return fibs[n];
+}
+
+// Functio to Clear Information
+function clearInfo() {
+    let txt = "";
+    document.getElementById('numinfo').innerHTML = txt;
