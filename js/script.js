@@ -42,3 +42,4 @@ function fibonacci(n) {
 function clearInfo() {
     let txt = "";
     document.getElementById('numinfo').innerHTML = txt;
+}
